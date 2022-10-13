@@ -26,3 +26,5 @@ A new second practical assignment for Huawei's NLP course
 
 и один посложнее, но не супер-сложный, чтобы его можно было побить приложив усилия за неделю
 ```
+
+Все инструкции для разработки есть в `contributing.md`
