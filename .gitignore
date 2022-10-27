@@ -2,3 +2,4 @@ venv/
 *.out
 *.html
 .ipynb_checkpoints/
+submission.csv
