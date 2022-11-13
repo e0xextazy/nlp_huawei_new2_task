@@ -3,3 +3,4 @@ venv/
 *.html
 .ipynb_checkpoints/
 submission.csv
+.idea/
