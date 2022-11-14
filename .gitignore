@@ -3,3 +3,5 @@ venv/
 *.html
 .ipynb_checkpoints/
 submission.csv
+.DS_Store
+*.ckpt
