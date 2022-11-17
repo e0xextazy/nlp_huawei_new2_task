@@ -5,3 +5,4 @@ venv/
 submission.csv
 .DS_Store
 *.ckpt
+__pycache__
