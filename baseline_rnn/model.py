@@ -52,20 +52,19 @@ class RecurrentClassifier(Module):
         self.config = config
         self.vocab = vocab
         self.emb_matrix = emb_matrix
-        self.embeddings = Embedding.from_pretrained(emb_matrix, freeze=config["freeze"],
-                                                    padding_idx=vocab.PAD_IDX)
-        cell_types = {
-            "RNN": RNN,
-            "GRU": GRU,
-            "LSTM": LSTM}
+        self.embeddings = Embedding.from_pretrained(
+            emb_matrix, freeze=config["freeze"], padding_idx=vocab.PAD_IDX
+        )
+        cell_types = {"RNN": RNN, "GRU": GRU, "LSTM": LSTM}
         cell_class = cell_types[config["cell_type"]]
-        self.cell = cell_class(input_size=emb_matrix.size(1),
-                               batch_first=True,
-                               hidden_size=config["hidden_size"],
-                               num_layers=config["num_layers"],
-                               dropout=config["cell_dropout"],
-                               bidirectional=config["bidirectional"],
-                               )
+        self.cell = cell_class(
+            input_size=emb_matrix.size(1),
+            batch_first=True,
+            hidden_size=config["hidden_size"],
+            num_layers=config["num_layers"],
+            dropout=config["cell_dropout"],
+            bidirectional=config["bidirectional"],
+        )
         activation_types = {
             "sigmoid": sigmoid,
             "tanh": tanh,
@@ -86,10 +85,14 @@ class RecurrentClassifier(Module):
 
     def forward(self, input):
         embedded = self.embeddings(input.data)
-        _, last_state = self.cell(PackedSequence(embedded,
-                                                 input.batch_sizes,
-                                                 sorted_indices=input.sorted_indices,
-                                                 unsorted_indices=input.unsorted_indices))
+        _, last_state = self.cell(
+            PackedSequence(
+                embedded,
+                input.batch_sizes,
+                sorted_indices=input.sorted_indices,
+                unsorted_indices=input.unsorted_indices,
+            )
+        )
         if isinstance(last_state, tuple):
             last_state = last_state[0]
         last_state = last_state.transpose(0, 1)

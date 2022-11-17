@@ -24,9 +24,9 @@ class Trainer:
         """
         self.config = config
         self.n_epochs = config["n_epochs"]
-        self.setup_opt_fn = lambda model: Adam(model.parameters(),
-                                               config["lr"],
-                                               weight_decay=config["weight_decay"])
+        self.setup_opt_fn = lambda model: Adam(
+            model.parameters(), config["lr"], weight_decay=config["weight_decay"]
+        )
         self.model = None
         self.opt = None
         self.history = None
@@ -107,11 +107,13 @@ class Trainer:
     def save(self, path: str):
         if self.model is None:
             raise RuntimeError("You should train the model first")
-        checkpoint = {"config": self.model.config,
-                      "trainer_config": self.config,
-                      "vocab": self.model.vocab,
-                      "emb_matrix": self.model.emb_matrix,
-                      "state_dict": self.model.state_dict()}
+        checkpoint = {
+            "config": self.model.config,
+            "trainer_config": self.config,
+            "vocab": self.model.vocab,
+            "emb_matrix": self.model.emb_matrix,
+            "state_dict": self.model.state_dict(),
+        }
         torch.save(checkpoint, path)
 
     @classmethod
@@ -121,7 +123,9 @@ class Trainer:
         for key in keys:
             if key not in ckpt:
                 raise RuntimeError(f"Missing key {key} in checkpoint")
-        new_model = RecurrentClassifier(ckpt["config"], ckpt["vocab"], ckpt["emb_matrix"])
+        new_model = RecurrentClassifier(
+            ckpt["config"], ckpt["vocab"], ckpt["emb_matrix"]
+        )
         new_model.load_state_dict(ckpt["state_dict"])
         new_trainer = cls(ckpt["trainer_config"])
         new_trainer.model = new_model

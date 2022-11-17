@@ -65,7 +65,10 @@ class TextDataset(Dataset):
         self.vocab = vocab
 
     def __getitem__(self, item):
-        return self.vocab.vectorize(self.texts[item]) + [self.vocab.EOS_IDX], self.labels[item]
+        return (
+            self.vocab.vectorize(self.texts[item]) + [self.vocab.EOS_IDX],
+            self.labels[item],
+        )
 
     def __len__(self):
         return len(self.texts)
@@ -74,8 +77,9 @@ class TextDataset(Dataset):
         """
         Technical method to form a batch to feed into recurrent network
         """
-        tmp = pack_sequence([torch.tensor(pair[0]) for pair in batch], enforce_sorted=False), torch.tensor(
-            [pair[1] for pair in batch])
+        tmp = pack_sequence(
+            [torch.tensor(pair[0]) for pair in batch], enforce_sorted=False
+        ), torch.tensor([pair[1] for pair in batch])
         return tmp
 
 
