@@ -27,15 +27,15 @@ The dataset presented here was collected from one of the public film rating reso
 ### Evaluation
 
 Submissions are scored using Accuracy error:
-$$
-Accuracy = \frac{1}{N} \sum_{i=1}^{N} E(y_{true}, y_{pred}),
-$$
-$$
-\mathrm{E}(x, y) = \begin{cases}
-    1 & \text{if } x = y \\
-    0 & \text{otherwise}
-\end{cases},
-$$
+
+<p align="center" width="100%">
+    <img width="65%" src="images/accuracy.png">
+</p>
+
+<p align="center" width="100%">
+    <img width="65%" src="images/exact_match.png">
+</p>
+
 where $N$ is the number of samples in the test dataset.
 
 ### Submission File
