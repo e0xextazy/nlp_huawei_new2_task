@@ -9,6 +9,18 @@
 # Practical Assignment 2
 ### Text multiclass classification: movie's genre
 
+## Contents
+- [Description](#description)
+- [Data](#data)
+- [Evaluation](#evaluation)
+- [Submission File](#submission-file)
+- [Usage](#usage)
+- [Contributing](#contributing)
+    - [Issue](#issue)
+    - [Pull request](#pull-request)
+- [Authors](#authors)
+
+## Description
 Your task is to classify film descriptions into 6 classes (Horror, Kids, Mystery, Comedy, Action, Drama). The metric is **Accuracy**.
 
 We present you 4 baseline solutions based on logistic regression, catboost, LSTM and Transformers. You can find them in their respective folders: `./baseline_tfidf_logreg`, `./<catboost_baseline>`, `./baseline_rnn` and `./<transformer_baseline>`. Each of these folders contains a file `requirements.txt` that will help you with the installation of the dependencies. To see the score and how many points you get if you can beat him, look at the table below:
