@@ -65,9 +65,11 @@ Horror
 
 ## Contributing
 Copy of the [`contributing.md`](https://github.com/e0xextazy/nlp_huawei_new2_task/blob/master/contributing.md).
+
 ### Issue
 - If you see an open issue and are willing to do it, add yourself to the performers and write about how much time it will take to fix it. See the pull request module below.
 - If you want to add something new or if you find a bug, you should start by creating a new issue and describing the problem/feature. Don't forget to include the appropriate labels.
+
 ### Pull request
 How to make a pull request.
 1. Clone the repository;
