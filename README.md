@@ -2,9 +2,13 @@
     <img width="65%" src="images/Huawei-Logo.wine-cropped.svg">
 </p>
 
-[![GitHub issues](https://img.shields.io/github/issues/e0xextazy/nlp_huawei_new2_task)](https://github.com/e0xextazy/nlp_huawei_new2_task/issues)
-[![GitHub license](https://img.shields.io/github/license/e0xextazy/nlp_huawei_new2_task?color=purple)](https://github.com/e0xextazy/nlp_huawei_new2_task/blob/main/LICENSE)
-[![Code style](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
+<div align="center">
+    
+  <a href="https://github.com/e0xextazy/nlp_huawei_new2_task/issues">![GitHub issues](https://img.shields.io/github/issues/e0xextazy/nlp_huawei_new2_task)</a>
+  <a href="https://github.com/e0xextazy/nlp_huawei_new2_task/blob/master/LICENSE">![GitHub license](https://img.shields.io/github/license/e0xextazy/nlp_huawei_new2_task?color=purple)</a>
+  <a href="https://github.com/psf/black">![Code style](https://img.shields.io/badge/code%20style-black-black)</a>
+    
+</div>
 
 # Practical Assignment 2
 ### Text multiclass classification: movie's genre
