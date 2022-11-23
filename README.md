@@ -57,3 +57,13 @@ Horror
 Horror
 ...
 ```
+
+## Usage
+1. `git clone https://github.com/e0xextazy/nlp_huawei_new2_task.git`
+2. `cd nlp_huawei_new2_task/`
+3. WIP
+
+## Authors
+- [Mark Baushenko](https://github.com/e0xextazy)
+- [Artem Boldinov](https://github.com/limpwinter)
+- [Milana Shxanukova](https://github.com/MilanaShhanukova)
