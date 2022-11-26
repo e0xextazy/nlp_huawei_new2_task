@@ -4,3 +4,4 @@ venv/
 .ipynb_checkpoints/
 submission.csv
 .idea/
+baseline_catboost/catboost_info
