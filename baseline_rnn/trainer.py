@@ -119,7 +119,8 @@ class Trainer:
     @classmethod
     def load(cls, path: str):
         ckpt = torch.load(path)
-        keys = ["config", "trainer_config", "vocab", "emb_matrix", "state_dict"]
+        keys = ["config", "trainer_config",
+                "vocab", "emb_matrix", "state_dict"]
         for key in keys:
             if key not in ckpt:
                 raise RuntimeError(f"Missing key {key} in checkpoint")
