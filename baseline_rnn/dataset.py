@@ -34,7 +34,8 @@ class Vocab:
         self.PAD_IDX = 0
         self.UNK_IDX = 1
         self.EOS_IDX = 2
-        self.itos = ["<PAD>", "<UNK>", "<EOS>"] + [pair[0] for pair in common_pairs]
+        self.itos = ["<PAD>", "<UNK>", "<EOS>"] + [pair[0]
+                                                   for pair in common_pairs]
         self.stoi = {token: i for i, token in enumerate(self.itos)}
 
     def vectorize(self, text: List[str]):
