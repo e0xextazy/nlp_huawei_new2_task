@@ -14,15 +14,18 @@
 ### Text multiclass classification: movie's genre
 
 ## Contents
-- [Description](#description)
-- [Data](#data)
-- [Evaluation](#evaluation)
-- [Submission File](#submission-file)
-- [Usage](#usage)
-- [Contributing](#contributing)
+- [Practical Assignment 2](#practical-assignment-2)
+    - [Text multiclass classification: movie's genre](#text-multiclass-classification-movies-genre)
+  - [Contents](#contents)
+  - [Description](#description)
+  - [Data](#data)
+  - [Evaluation](#evaluation)
+  - [Submission File](#submission-file)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
     - [Issue](#issue)
     - [Pull request](#pull-request)
-- [Authors](#authors)
+  - [Authors](#authors)
 
 ## Description
 Your task is to classify film descriptions into 6 classes (Horror, Kids, Mystery, Comedy, Action, Drama). The metric is **Accuracy**.
@@ -31,9 +34,9 @@ We present you 4 baseline solutions based on logistic regression, catboost, LSTM
 
 | baseline    | Accuracy    | Points      |
 | ----------- | ----------- | ----------- |
-| LogReg      | 0.41624     | X points    |
+| LogReg      | 0.36294     | X points    |
 | CatBoost    | WIP         | Y points    |
-| LSTM        | 0.46319     | Z points    |
+| LSTM        | ЦШЗ         | Z points    |
 | Transformer | WIP         | V points    |
 
 If you will be the first in your group, you'll get 3 bonus points.
