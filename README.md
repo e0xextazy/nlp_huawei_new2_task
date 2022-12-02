@@ -34,10 +34,10 @@ We present you 4 baseline solutions based on logistic regression, catboost, LSTM
 
 | baseline    | Accuracy    | Points      |
 | ----------- | ----------- | ----------- |
-| LogReg      | 0.36294     | X points    |
-| CatBoost    | WIP         | Y points    |
-| LSTM        | ЦШЗ         | Z points    |
-| Transformer | WIP         | V points    |
+| LogReg      | 0.36294     | `<X>` points|
+| CatBoost    | 0.59137     | `<Y>` points|
+| LSTM        | 0.52664     | `<Z>` points|
+| Transformer | WIP         | `<V>` points|
 
 If you will be the first in your group, you'll get 3 bonus points.
 
@@ -50,6 +50,8 @@ The dataset presented here was collected from one of the public film rating reso
 - `train.csv` - The training set, comprising the `movie_name`, `movie_description` and `target` of each film, the latter of which is the genre of the film. `target` comprise the target for the competition. All columns are a string data type.
 - `test.csv` - For the test data we give only the `movie_description` of an film together with its `movie_name`.
 - `sample_submission.csv` - A submission file in the correct format.
+
+You can download the dataset by following the [link](https://drive.google.com/drive/folders/1ZXq5wkOH4FdHD3HM3fzh61rSwqJaYT5k?usp=sharing).
 
 ## Evaluation
 
@@ -69,18 +71,25 @@ where $N$ is the number of samples in the test dataset.
 
 For each row in the test set, you need to predict one of the 6 movie genres. The file should contain a header and have the following format:
 ```
-target
-Horror
-Horror
-Horror
-Horror
+id,target
+d996f823,Horror
+1cf01f9c,Horror
+856ea05c,Horror
+c97899ee,Horror
 ...
 ```
 
 ## Usage
-1. `git clone https://github.com/e0xextazy/nlp_huawei_new2_task.git`
+1. Clonning repo: `git clone https://github.com/e0xextazy/nlp_huawei_new2_task.git`
 2. `cd nlp_huawei_new2_task/`
-3. WIP
+3. Setup your baseline:
+   1. TF-IDF + Logistic Regression: `./setup/setup_tf_idf_logreg.sh`
+   2. Catboost: `./setup/setup_catboost.sh`
+   3. LSTM: `./setup/setup_lstm.sh`
+   4. Transformers: `./setup/setup_transformers.sh`
+4. Activate virtual environment: `source venv/bin/activate`
+5. Download data: `./setup/download_data.sh`
+6. Enjoy!
 
 ## Contributing
 Copy of the [`contributing.md`](https://github.com/e0xextazy/nlp_huawei_new2_task/blob/master/contributing.md).
