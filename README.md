@@ -110,5 +110,5 @@ How to make a pull request.
 
 ## Authors
 - [Mark Baushenko](https://github.com/e0xextazy)
-- [Artem Boldinov](https://github.com/limpwinter)
+- [Artyom Boldinov](https://github.com/limpwinter)
 - [Milana Shxanukova](https://github.com/MilanaShhanukova)
