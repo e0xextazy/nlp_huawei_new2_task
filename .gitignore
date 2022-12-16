@@ -8,3 +8,4 @@ baseline_catboost/catboost_info
 .DS_Store
 *.ckpt
 __pycache__
+*.csv
