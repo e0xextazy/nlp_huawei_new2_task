@@ -10,12 +10,10 @@
     
 </div>
 
-# Practical Assignment 2
-### Text multiclass classification: movie's genre
+# Practical Assignment 2: Text multiclass classification: movie's genre
 
 ## Contents
-- [Practical Assignment 2](#practical-assignment-2)
-    - [Text multiclass classification: movie's genre](#text-multiclass-classification-movies-genre)
+- [Practical Assignment 2: Text multiclass classification: movie's genre](#practical-assignment-2-text-multiclass-classification-movies-genre)
   - [Contents](#contents)
   - [Description](#description)
   - [Data](#data)
