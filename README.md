@@ -82,14 +82,15 @@ c97899ee,Horror
 ## Usage
 1. Clonning repo: `git clone https://github.com/e0xextazy/nlp_huawei_new2_task.git`
 2. `cd nlp_huawei_new2_task/`
-3. Setup your baseline:
+3. Create virtual environment: `python3.7 -m venv venv`
+4. Activate virtual environment: `source venv/bin/activate`
+5. Setup your baseline:
    1. TF-IDF + Logistic Regression: `./setup/setup_tf_idf_logreg.sh`
    2. Catboost: `./setup/setup_catboost.sh`
    3. LSTM: `./setup/setup_lstm.sh`
    4. Transformers: `./setup/setup_transformers.sh`
-4. Activate virtual environment: `source venv/bin/activate`
-5. Download data: `./setup/download_data.sh`
-6. Enjoy!
+6. Download data: `./setup/download_data.sh`
+7. Enjoy!
 
 ## Contributing
 Copy of the [`contributing.md`](https://github.com/e0xextazy/nlp_huawei_new2_task/blob/master/contributing.md).
