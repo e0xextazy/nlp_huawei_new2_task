@@ -70,10 +70,10 @@ where $N$ is the number of samples in the test dataset.
 For each row in the test set, you need to predict one of the 6 movie genres. The file should contain a header and have the following format:
 ```
 id,target
-d996f823,5
-1cf01f9c,2
-856ea05c,3
-c97899ee,0
+133530575988338041546938011932244933990,5
+133530621940672299820253816187736128870,2
+133530687700047186659654018829214907750,3
+133531296172335296209766737246753488230,0
 ...
 ```
 
