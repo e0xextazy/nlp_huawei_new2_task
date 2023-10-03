@@ -1,16 +1,16 @@
-import pandas as pd
 import torch
 from torch.utils.data import Dataset
 
 
-class RottenTomatoesDataset(Dataset):
+class FiveDataset(Dataset):
 
     def __init__(self, dataframe, tokenizer, max_seq_len):
         self.data = dataframe
-        self.text = dataframe['movie_description']
+        self.text = dataframe['text'].tolist()
         self.targets = None
-        if 'target' in dataframe:
-            self.targets = dataframe['target']
+        if 'rate' in dataframe:
+            dataframe.rate = dataframe.rate.apply(lambda x: x-1)
+            self.targets = dataframe['rate'].tolist()
         self.tokenizer = tokenizer
         self.max_seq_len = max_seq_len
 
@@ -44,37 +44,3 @@ class RottenTomatoesDataset(Dataset):
 
     def __len__(self) -> int:
         return len(self.text)
-
-
-def train_test_split(data: pd.DataFrame, train_frac=0.85):
-    """
-    Splits the data into train and test parts, stratifying by labels.
-    Should it shuffle the data before split?
-    :param data: dataset to split
-    :param train_frac: proportion of train examples
-    :return: texts and labels for each split
-    """
-    # n_films_genres = 6
-    train_data, test_data = None, None
-    train_texts = []
-    test_texts = []
-    train_labels = []
-    test_labels = []
-
-    for label in data['target'].unique():
-        texts = data[data.target == label].movie_description
-        n_train = int(len(texts) * train_frac)
-        n_test = len(texts) - n_train
-        train_texts.extend(texts[:n_train])
-        test_texts.extend(texts[n_train:])
-        train_labels += [label] * n_train
-        test_labels += [label] * n_test
-        train_data = {
-            'movie_description': train_texts,
-            'target': train_labels
-        }
-        test_data = {
-            'movie_description': test_texts,
-            'target': test_labels
-        }
-    return pd.DataFrame(train_data), pd.DataFrame(test_data)

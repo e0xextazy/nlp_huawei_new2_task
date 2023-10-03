@@ -9,3 +9,5 @@ baseline_catboost/catboost_info
 *.ckpt
 __pycache__
 *.csv
+*.gz
+tmp.ipynb

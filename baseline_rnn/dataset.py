@@ -92,13 +92,13 @@ def train_test_split(data, train_frac=0.85):
     :param train_frac: proportion of train examples
     :return: texts and labels for each split
     """
-    n_toxicity_ratings = 6
+    n_toxicity_ratings = 5
     train_labels = []
     val_labels = []
     train_texts = []
     val_texts = []
     for label in range(n_toxicity_ratings):
-        texts = data[data.target == label].movie_description.values
+        texts = data[data.rate == label].text.values
         n_train = int(len(texts) * train_frac)
         n_val = len(texts) - n_train
         train_texts.extend(texts[:n_train])

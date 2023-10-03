@@ -6,7 +6,7 @@ from torch.nn import CrossEntropyLoss
 from torch.optim import Adam
 from tqdm.notebook import tqdm
 
-from model import DistilBertForClassification
+from model import ModelForClassification
 
 
 class Trainer:
@@ -118,7 +118,7 @@ class Trainer:
         for key in keys:
             if key not in ckpt:
                 raise RuntimeError(f"Missing key {key} in checkpoint")
-        new_model = DistilBertForClassification(
+        new_model = ModelForClassification(
             ckpt['model_name'],
             ckpt["config"]
         )

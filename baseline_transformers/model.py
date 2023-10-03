@@ -1,19 +1,19 @@
 from typing import Dict
 
 import torch
-from transformers import DistilBertModel
+from transformers import AutoModel
 
 
-class DistilBertForClassification(torch.nn.Module):
+class ModelForClassification(torch.nn.Module):
 
-    def __init__(self, distil_bert_path: str, config: Dict):
-        super(DistilBertForClassification, self).__init__()
-        self.model_name = distil_bert_path
+    def __init__(self, model_path: str, config: Dict):
+        super(ModelForClassification, self).__init__()
+        self.model_name = model_path
         self.config = config
         self.n_classes = config['num_classes']
         self.dropout_rate = config['dropout_rate']
-        self.bert = DistilBertModel.from_pretrained(distil_bert_path)
-        self.pre_classifier = torch.nn.Linear(768, 768)
+        self.bert = AutoModel.from_pretrained(self.model_name)
+        self.pre_classifier = torch.nn.Linear(312, 768)
         self.dropout = torch.nn.Dropout(self.dropout_rate)
         self.classifier = torch.nn.Linear(768, self.n_classes)
 
