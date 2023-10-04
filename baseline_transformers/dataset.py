@@ -9,7 +9,6 @@ class FiveDataset(Dataset):
         self.text = dataframe['text'].tolist()
         self.targets = None
         if 'rate' in dataframe:
-            dataframe.rate = dataframe.rate.apply(lambda x: x-1)
             self.targets = dataframe['rate'].tolist()
         self.tokenizer = tokenizer
         self.max_seq_len = max_seq_len

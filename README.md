@@ -10,10 +10,10 @@
     
 </div>
 
-# Practical Assignment 2: Text multiclass classification: movie's genre
+# Practical Assignment 2: Text multiclass classification: store's review rating
 
 ## Contents
-- [Practical Assignment 2: Text multiclass classification: movie's genre](#practical-assignment-2-text-multiclass-classification-movies-genre)
+- [Practical Assignment 2: Text multiclass classification: shop's rating](#practical-assignment-2-text-multiclass-classification-shops-rating)
   - [Contents](#contents)
   - [Description](#description)
   - [Data](#data)
@@ -26,16 +26,16 @@
   - [Authors](#authors)
 
 ## Description
-Your task is to classify film descriptions into 6 classes. The metric is **Accuracy**.
+Your task is to classify the store's review rating into 5 classes. The metric is **Accuracy**.
 
-We present you 4 baseline solutions based on logistic regression, catboost, LSTM and Transformers. You can find them in their respective folders: `./baseline_tfidf_logreg`, `./<catboost_baseline>`, `./baseline_rnn` and `./<transformer_baseline>`. Each of these folders contains a file `requirements.txt` that will help you with the installation of the dependencies. To see the score and how many points you get if you can beat him, look at the table below:
+We present you 4 baseline solutions based on logistic regression, catboost, LSTM and Transformers. You can find them in their respective folders: `./baseline_tfidf_logreg`, `./baseline_catboost`, `./baseline_rnn` and `./baseline_transformers`. Each of these folders contains a file `requirements.txt` that will help you with the installation of the dependencies. To see the score and how many points you get if you can beat him, look at the table below:
 
 | baseline    | Accuracy    | Points      |
 | ----------- | ----------- | ----------- |
-| LogReg      | 0.43687     | `<X>` points|
-| CatBoost    | 0.2324      | `<Y>` points|
-| LSTM        | 0.34413     | `<Z>` points|
-| Transformer | 0.6134      | `<V>` points|
+| LogReg      | 0.5846      | `<X>` points|
+| CatBoost    | 0.6455      | `<Y>` points|
+| LSTM        | 0.6227      | `<Z>` points|
+| Transformer | 0.6354      | `<V>` points|
 
 If you will be the first in your group, you'll get 3 bonus points.
 
@@ -43,13 +43,13 @@ Please **DO NOT** develop your solution as a fork of this repository. Also pleas
 
 ## Data
 
-The dataset presented here was collected from one of the public film rating resources. We have selected the 6 most popular movie genres and invite you to try to predict them.
+The dataset presented here was collected from one of the most popular maps. It contains reviews and ratings from 1 to 5 and we suggest you try to predict them.
 
-- `train.csv` - The training set, comprising the `movie_name`, `movie_description` and `target` of each film, the latter of which is the genre of the film. `target` comprise the target for the competition.
-- `test.csv` - For the test data we give only the `movie_description` of an film together with its `movie_name`.
+- `train.csv` - The training set, comprising the `rate` and `text` of each review. `rate` comprise the target for the competition.
+- `test.csv` - For the test data we give only the `text` of a review.
 - `sample_submission.csv` - A submission file in the correct format.
 
-You can download the dataset by following the [link](https://drive.google.com/drive/folders/1ZkwB0VZ0N11HyiSqNKT5mznaHrw1wi1W?usp=sharing).
+You can download the dataset by following the [link](https://drive.google.com/drive/folders/1k-y7bLFXH94Y5pzUHYro1iTMsqsSoaHH?usp=sharing).
 
 ## Evaluation
 
@@ -67,13 +67,13 @@ where $N$ is the number of samples in the test dataset.
 
 ## Submission File
 
-For each row in the test set, you need to predict one of the 6 movie genres. The file should contain a header and have the following format:
+For each row in the test set, you need to predict one of the 5 rates. The file should contain a header and have the following format:
 ```
-id,target
-133530575988338041546938011932244933990,5
-133530621940672299820253816187736128870,2
-133530687700047186659654018829214907750,3
-133531296172335296209766737246753488230,0
+rate
+1
+2
+3
+4
 ...
 ```
 
@@ -111,3 +111,4 @@ How to make a pull request.
 - [Mark Baushenko](https://t.me/kaggle_fucker)
 - [Artyom Boldinov](https://github.com/limpwinter)
 - [Milana Shkhanukova](https://github.com/MilanaShhanukova)
+- [Nikita Safonov](https://github.com/sixxio)
