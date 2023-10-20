@@ -32,10 +32,10 @@ We present you 4 baseline solutions based on logistic regression, catboost, LSTM
 
 | baseline    | Accuracy    | F1-score    | Points      |
 | ----------- | ----------- | ----------- | ----------- |
-| LogReg      | 0.5846      |             | `<X>` points|
-| CatBoost    | 0.6455      |             | `<Y>` points|
-| LSTM        | 0.6227      |             | `<Z>` points|
-| Transformer | 0.6354      |             | `<V>` points|
+| LogReg      | 0.5846      | 0.5178      | 12 points   |
+| CatBoost    | 0.6455      | 0.6161      | 12 points   |
+| LSTM        | 0.6227      | 0.6101      | 12 points   |
+| Transformer | 0.6354      | 0.6286      | 12 points   |
 
 If you will be the first in your group, you'll get 3 bonus points.
 
