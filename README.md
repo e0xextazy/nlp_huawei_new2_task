@@ -26,16 +26,16 @@
   - [Authors](#authors)
 
 ## Description
-Your task is to classify the store's review rating into 5 classes. The metric is **Accuracy**.
+Your task is to classify the store's review rating into 5 classes. The metric is **F1-score**.
 
 We present you 4 baseline solutions based on logistic regression, catboost, LSTM and Transformers. You can find them in their respective folders: `./baseline_tfidf_logreg`, `./baseline_catboost`, `./baseline_rnn` and `./baseline_transformers`. Each of these folders contains a file `requirements.txt` that will help you with the installation of the dependencies. To see the score and how many points you get if you can beat him, look at the table below:
 
-| baseline    | Accuracy    | Points      |
-| ----------- | ----------- | ----------- |
-| LogReg      | 0.5846      | `<X>` points|
-| CatBoost    | 0.6455      | `<Y>` points|
-| LSTM        | 0.6227      | `<Z>` points|
-| Transformer | 0.6354      | `<V>` points|
+| baseline    | Accuracy    | F1-score    | Points      |
+| ----------- | ----------- | ----------- | ----------- |
+| LogReg      | 0.5846      |             | `<X>` points|
+| CatBoost    | 0.6455      |             | `<Y>` points|
+| LSTM        | 0.6227      |             | `<Z>` points|
+| Transformer | 0.6354      |             | `<V>` points|
 
 If you will be the first in your group, you'll get 3 bonus points.
 
@@ -53,27 +53,21 @@ You can download the dataset by following the [link](https://drive.google.com/dr
 
 ## Evaluation
 
-Submissions are scored using Accuracy error:
+Submissions are scored using F1-score:
 
 <p align="center" width="100%">
-    <img width="65%" src="images/accuracy.png">
+    <img width="65%" src="images/f1.png">
 </p>
-
-<p align="center" width="100%">
-    <img width="65%" src="images/exact_match.png">
-</p>
-
-where $N$ is the number of samples in the test dataset.
 
 ## Submission File
 
-For each row in the test set, you need to predict one of the 5 rates. The file should contain a header and have the following format:
+For each row in the test set, you need to predict one of the 5 rates, from 1 to 5. The file should contain a header and have the following format:
 ```
-rate
-1
-2
-3
-4
+index,rate
+0,5
+1,5
+2,5
+3,5
 ...
 ```
 
