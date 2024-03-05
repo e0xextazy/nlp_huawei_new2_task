@@ -1,7 +1,3 @@
-<p align="center" width="100%">
-    <img width="65%" src="images/Huawei-Logo.wine-cropped.svg">
-</p>
-
 <div align="center">
     
   <a href="https://github.com/e0xextazy/nlp_huawei_new2_task/issues">![GitHub issues](https://img.shields.io/github/issues/e0xextazy/nlp_huawei_new2_task)</a>
